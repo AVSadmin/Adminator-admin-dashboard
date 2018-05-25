@@ -12,13 +12,13 @@
   background-color: $default-white;
   border-bottom: 1px solid $border-color;
   display: block;
-  height: $header-height;
   margin-bottom: 0;
   padding: 0;
   position: fixed;
   transition: all 0.2s ease;
   width: calc(100% - #{$offscreen-size});
   z-index: 800;
+  top: 0;
 
   @include to($breakpoint-md) {
     width: 100%;
@@ -30,6 +30,8 @@
 
   .header-container {
     @include clearfix;
+
+    height: $header-height;
 
     .nav-left,
     .nav-right {
